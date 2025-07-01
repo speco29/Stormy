@@ -3,7 +3,9 @@ information.innerText = `This app is using Chrome (v${versions.chrome()}), Node.
 
 const func = async () => {
   const response = await window.versions.ping()
-  console.log(response) // prints out 'pong'
+  console.log(response)
+  console.log(window.myAPI)
+// => undefined // prints out 'pong'
 }
 
 func()
