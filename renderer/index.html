@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Music App</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
 <body>
   <div class="window-controls">
-    <button id="minimize">—</button>
-    <button id="close">X</button>
+    <button onclick="window.electronAPI.controlWindow('minimize')">_</button>
+    <button onclick="window.electronAPI.controlWindow('close')">X</button>
   </div>
-
-  <div class="start-container">
-    <div class="start-overlay">
-      
-      <button id="start-btn">Start</button>
-    </div>
+  <div class="center">
+    <button id="startBtn">Start</button>
   </div>
-
-  <script src="scripts/index.js"></script>
+  <script>
+    document.getElementById('startBtn').onclick = () => {
+      window.electronAPI.navigate('playlist');
+    };
+  </script>
 </body>
-</html>

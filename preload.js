@@ -1,6 +1,6 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  minimize: () => ipcRenderer.send('minimize'),
-  close: () => ipcRenderer.send('close')
+  navigate: (page) => ipcRenderer.send('navigate', page),
+  controlWindow: (action) => ipcRenderer.send('window-control', action),
 });

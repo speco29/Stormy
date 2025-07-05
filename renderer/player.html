@@ -1,25 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-  <img id="cover" src="assets/covers/song1.jpeg" alt="Cover" />
+  <h1 id="songTitle">Now Playing</h1>
+  <img id="cover" src="" alt="Cover" />
   <audio id="audio" controls></audio>
-  <div class="window-controls">
-  <button id="minimize">—</button>
-  <button id="close">X</button>
+  <div class="controls">
+    <button onclick="prevSong()">⏮️</button>
+    <button onclick="togglePlay()">⏯️</button>
+    <button onclick="nextSong()">⏭️</button>
   </div>
+  <input type="range" id="timeline" value="0" />
+  <script>
+    const songs = ['song1', 'song2', 'song3', 'song4'];
+    let currentIndex = songs.indexOf(localStorage.getItem('currentSong'));
+    const audio = document.getElementById('audio');
+    const cover = document.getElementById('cover');
+    const title = document.getElementById('songTitle');
+    const timeline = document.getElementById('timeline');
 
-  <div>
-    <button id="prev">⏮️</button>
-    <button id="play-pause">⏯️</button>
-    <button id="next">⏭️</button>
-  </div>
-  <div id="timer">00:00 / 00:00</div>
-  <script src="scripts/player.js"></script>
+    function loadSong(index) {
+      const song = songs[index];
+      title.innerText = song;
+      audio.src = `../assets/songs/${song}.mp3`;
+      cover.src = `../assets/covers/${song}.png`;
+      audio.onloadedmetadata = () => {
+        audio.play();
+      };
+    }
+    
+
+    function togglePlay() {
+      if (audio.paused) audio.play();
+      else audio.pause();
+    }
+
+    function prevSong() {
+      currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+      loadSong(currentIndex);
+    }
+
+    function nextSong() {
+      currentIndex = (currentIndex + 1) % songs.length;
+      loadSong(currentIndex);
+    }
+
+    audio.ontimeupdate = () => {
+      if (audio.duration) {
+        timeline.value = (audio.currentTime / audio.duration) * 100;
+      }
+    };
+
+    timeline.oninput = (e) => {
+      audio.currentTime = (e.target.value / 100) * audio.duration;
+    };
+
+    audio.onended = () => {
+      nextSong();
+    };
+
+    
+
+    document.getElementById('timeline').oninput = (e) => {
+      audio.currentTime = (e.target.value / 100) * audio.duration;
+    };
+
+    loadSong(currentIndex);
+  </script>
 </body>
-
-</html>
