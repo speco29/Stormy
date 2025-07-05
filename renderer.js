@@ -5,7 +5,7 @@ const func = async () => {
   const response = await window.versions.ping()
   console.log(response)
   console.log(window.myAPI)
-// => undefined // prints out 'pong'
+
 }
 
 func()
