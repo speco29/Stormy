@@ -20,7 +20,7 @@
       const song = songs[index];
       title.innerText = song;
       audio.src = `../assets/songs/${song}.mp3`;
-      cover.src = `../assets/covers/${song}.png`;
+      cover.src = `../assets/covers/${song}.jpeg`;
       audio.onloadedmetadata = () => {
         audio.play();
       };
