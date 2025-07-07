@@ -1,12 +1,20 @@
 <body>
   <div class="window-controls">
-    <button onclick="window.electronAPI.controlWindow('minimize')">_</button>
-    <button onclick="window.electronAPI.controlWindow('close')">X</button>
+    <img src="assets/covers/minimize-button.png" class="control-btn" id="minimizeBtn" alt="Minimize">
+    <img src="assets/covers/cross-Icon.png" class="control-btn" id="closeBtn" alt="Close">
   </div>
+
   <div class="center">
-    <button id="startBtn">Start</button>
+    <img src="assets/covers/start.png" id="startBtn" class="start-btn" alt="Start">
   </div>
+
   <script>
+    document.getElementById('minimizeBtn').onclick = () => {
+      window.electronAPI.controlWindow('minimize');
+    };
+    document.getElementById('closeBtn').onclick = () => {
+      window.electronAPI.controlWindow('close');
+    };
     document.getElementById('startBtn').onclick = () => {
       window.electronAPI.navigate('playlist');
     };

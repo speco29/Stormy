@@ -4,49 +4,54 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
   height: 100%;
   overflow: hidden;
+  background-color: #c7aabf;
 }
 
-.start-page {
-  background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
-  height: 100vh;
+.cover-image {
+  width: 100vw;         /* Match window width */
+  height: 100vh;        /* Match window height */
+  object-fit: contain;  /* Scale image to fit without cropping */
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/* ✅ Fix: Use absolute positioning for top-right controls */
+.window-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  gap: 10px;
+  z-index: 10;
 }
 
-.overlay {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 40px;
-  text-align: center;
-  color: white;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.app-title {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-#startBtn {
-  padding: 12px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 30px;
-  background: #ff6ec4;
-  background: linear-gradient(to right, #7873f5, #ff6ec4);
-  color: white;
+.window-controls img {
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-#startBtn:hover {
+.window-controls img:hover {
+  transform: scale(1.1);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start-btn {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.start-btn:hover {
   transform: scale(1.05);
 }
