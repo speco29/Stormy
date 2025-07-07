@@ -16,8 +16,6 @@ My spotify was giving me one heck of a time, so I made ahh music app for myself 
 - 🎛️ **Custom Window Controls**  
   Includes start, minimize, and close buttons tailored for a native feel.
 
-- 🌐 **Multilingual Support (Planned)**  
-  Scalable localization architecture for future language integration.
 
 ## 🚀 Getting Started
 
