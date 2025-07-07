@@ -1,6 +1,6 @@
 # 🎵 My Music App
 
-A sleek, ElectronJS-powered desktop music player that blends seamless navigation, autoplay functionality, and aesthetic design. Built with a focus on user experience, this app offers dynamic transitions, custom window controls, and responsive layouts — all wrapped in a visually appealing interface.
+My spotify was giving me one heck of a time, so I made ahh music app for myself using electronJs. As for now the app conatains only 4 songs, you can add more, custom it and use it as per your need;)
 
 ## ✨ Features
 
