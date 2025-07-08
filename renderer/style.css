@@ -25,6 +25,7 @@ body, html {
   display: flex;
   gap: 10px;
   z-index: 10;
+  background-color: #c7aabf;
 }
 
 .window-controls img {
@@ -54,4 +55,10 @@ body, html {
 
 .start-btn:hover {
   transform: scale(1.05);
+}
+
+.song-btn{
+  width: 70pc;
+  height: 40pc;
+
 }

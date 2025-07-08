@@ -1,16 +1,33 @@
 <body>
+  <!-- Window Controls -->
   <div class="window-controls">
-    <button onclick="window.electronAPI.controlWindow('minimize')">_</button>
-    <button onclick="window.electronAPI.controlWindow('close')">X</button>
+    <img src="../assets/covers/cross-Icon.png" id="closeBtn" class="control-btn" alt="Close">
+    <img src="../assets/covers/minimize-button.png" id="minimizeBtn" class="control-btn" alt="Minimize">
   </div>
-  <h1>Playlist</h1>
+
+  <!-- Playlist Heading -->
+  <div class="heading">
+    
+    <img src="../assets/covers/playlist-heading.png" alt="playlist_heading">
+    
+  </div>
+
+  <!-- Song Buttons -->
   <div class="songs">
-    <button onclick="playSong('song1')">Song 1</button>
-    <button onclick="playSong('song2')">Song 2</button>
-    <button onclick="playSong('song3')">Song 3</button>
-    <button onclick="playSong('song4')">Song 4</button>
+    <img src="../assets/covers/song1-button.png" class="song-btn" onclick="playSong('song1')" alt="Song 1">
+    <img src="../assets/covers/song2-button.png" class="song-btn" onclick="playSong('song2')" alt="Song 2">
+    <img src="../assets/covers/song3-button.png" class="song-btn" onclick="playSong('song3')" alt="Song 3">
+    <img src="../assets/covers/song4-button.png" class="song-btn" onclick="playSong('song4')" alt="Song 4">
   </div>
+
   <script>
+    document.getElementById('minimizeBtn').onclick = () => {
+      window.electronAPI.controlWindow('minimize');
+    };
+    document.getElementById('closeBtn').onclick = () => {
+      window.electronAPI.controlWindow('close');
+    };
+
     function playSong(songId) {
       localStorage.setItem('currentSong', songId);
       window.electronAPI.navigate('player');
