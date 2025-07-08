@@ -2,7 +2,7 @@
 
 My spotify was giving me one heck of a time, so I made ahh music app for myself using electronJs. As for now the app conatains only 4 songs, you can add more, custom it and use it as per your need;)
  
-
+ 
 ## ✨ Features
 
 - 🎧 **Autoplay & Seamless Transitions**  
