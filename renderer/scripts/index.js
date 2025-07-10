@@ -8,5 +8,6 @@ document.getElementById('minimize').addEventListener('click', () => {
 
 document.getElementById('close').addEventListener('click', () => {
   window.electronAPI.close();
+  
 });
 
