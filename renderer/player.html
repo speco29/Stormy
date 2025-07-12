@@ -16,7 +16,7 @@
     const title = document.getElementById('songTitle');
     const timeline = document.getElementById('timeline');
 
-    function loadSong(index) {
+    function loadSong(index) { 
       const song = songs[index];
       title.innerText = song;
       audio.src = `../assets/songs/${song}.mp3`;
