@@ -10,4 +10,7 @@ document.getElementById('close').addEventListener('click', () => {
   window.electronAPI.close();
 });
 
+
+
+
   
