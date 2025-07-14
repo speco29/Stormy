@@ -1,6 +1,6 @@
 # 🎵 My Music App
 
-My spotify was giving me one heck of a time, so I made ahh music app for myself using electronJs. As for now the app conatains only 4 songs, you can add more, custom it and use it as per your need;)    
+My spotify was giving me one heck of a time, so I made ahh music app for myself using electronJs. As for now the app conatains only 4 songs, you can add more, custom it and use it as per your need. Although the CSS is not styled well, if you can do that, you are welcome to do so;)
       
   
 ## ✨ Features
