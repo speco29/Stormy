@@ -1,6 +1,6 @@
 # 🎵 Stormy
  
-My spotify was giving me one heck of a time, so I made ahh music app Stormy for myself using electronJs. As for now the app conatains only 4 songs, you can add more, custom it and use it as per your need. Although the CSS is not styled well, if you can do that, you are welcome to do so. All the sources are available in ```assets/covers``` folder;)  
+My spotify was giving me one heck of a time, so I made ahh music app Stormy for myself using electronJs. As for now the app conatains only 4 songs, you can add more, custom it and use it as per your need. Although the CSS is not styled  well, if you can do that, you are welcome to do so. All the sources are available in ```assets/covers``` folder;)  
           
        
 ## ✨ Features 
