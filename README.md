@@ -4,7 +4,7 @@ My spotify was giving me one heck of a time, so I made ahh music app **Stormy** 
               
           
 ## ✨ Features 
- 
+  
 - 🎧 **Autoplay & Seamless Transitions**  
   Automatically plays the next track with smooth visual and audio transitions.
 
