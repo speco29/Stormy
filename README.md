@@ -11,7 +11,7 @@ My spotify was giving me one heck of a time, so I made ahh music app **Stormy** 
 - 🖼️ **Custom UI with Glassmorphism & Gradients**  
   Stylish interface featuring gradient backgrounds, glass effects, and responsive design.
  
-- 🧭 **Intuitive Navigation**  
+- 🧭 **Intuitive Navigation**   
   Effortless switching between playlists, now playing, and settings.
 
 - 🎛️ **Custom Window Controls**  
